@@ -1,0 +1,58 @@
+<div class="modal fade modal-tarefa" id="exampleModal" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Nova tarefa</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <label for="inp_titulo" class="lbl_titulo">Titulo</label>
+                            <input type="text" class="form-control" id="inp_titulo" placeholder="Digite aqui">
+                            <div class="validacao">
+                                <span class="valid-text" id="erro_titulo">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="inp_descricao" class="lbl_descricao">Descrição</label>
+                            <input type="text" class="form-control" id="inp_descricao" placeholder="Digite aqui">
+                            <div class="validacao">
+                                <span class="valid-text" id="erro_descricao">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="inp_dt_inicio" class="lbl_dt_inicio">Data de inicio</label>
+                            <input type="date" class="form-control" id="inp_dt_inicio">
+                            <div class="validacao">
+                                <span class="valid-text" id="erro_dt_inicio">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="inp_dt_fim" class="lbl_dt_fim">Data de fim</label>
+                            <input type="date" class="form-control" id="inp_dt_fim">
+                            <div class="validacao">
+                                <span class="valid-text" id="erro_dt_fim">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" onclick="lista.cadastrar_tarefa()">Criar</button>
+                </div>
+            </div>
+        </div>
+    </div>

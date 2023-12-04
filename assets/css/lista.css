@@ -1,0 +1,365 @@
+:root {
+    --header-height: 3rem;
+    --nav-width: 68px;
+    --primary-black: #1E1E1E;
+    /*--first-color*/
+    --primary-dark-purple: #5435C5;
+    --primary-purple: #664ebf;
+    --primary-light-purple: #A191D9;
+    --primary-green: #01CCA7;
+    --primary-yellow: #DAAA02;
+    --primary-white: #F8F8F7;
+    --sencodary-white: #FFFFFF;
+    --primary-gray-texts: #4A4A4A;
+    --primary-gray: #8B8B8B;
+    --secondary-gray: #757575;
+    --first-color-light: #AFA5D9;
+    --body-font: montserrat;
+    --normal-font-size: 1rem;
+    --z-fixed: 100
+}
+
+
+@font-face {
+    font-family: montserrat;
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: montserratBlack;
+    src: url('../fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: montserratBold;
+    src: url('../fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: montserratLight;
+    src: url('../fonts/Montserrat-Light.ttf');
+}
+
+@font-face {
+    font-family: montserratMedium;
+    src: url('../fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: montserratThin;
+    src: url('../fonts/Montserrat-Thin.ttf');
+}
+
+main .header-list {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5vh;
+    padding-right: 2vw;
+    padding-bottom: 1.5rem;
+}
+
+main .header-list .header-list-title {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+main .header-list .header-list-title .title {
+    color: var(--primary-dark-purple);
+    display: flex;
+    font-size: 1.5rem;
+    gap: 0.5rem;
+}
+
+main .header-list .header-list-title .title .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+main .header-list .header-list-title .title .desc h4 {
+    margin-bottom: 0;
+    font-family: montserratBold;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+main .header-list .header-list-title .title .desc #list_desc {
+    font-family: montserrat;
+    color: var(--primary-gray-texts);
+    font-size: .9rem;
+}
+
+
+
+#div_outros {
+    display: none;
+}
+
+main .header-list .btn-nova-lista {
+    height: 40px;
+    background-color: var(--primary-dark-purple);
+    border-radius: 5px;
+    color: var(--primary-white);
+    font-family: montserratBold;
+    border: #5435C5 solid 3px;
+}
+
+main .header-list .btn-nova-lista:hover {
+    background-color: var(--primary-dark-purple);
+    border: #5435C5 solid 2px;
+    transition: .3s;
+    box-shadow: 0px 8px 26px 5px rgba(84, 53, 197, 0.21);
+}
+
+main .tasks .container .row {
+    gap: 1.4rem;
+}
+
+main .tasks .container .row .col {
+    width: 20vw;
+    /* border: solid 1px var(--primary-gray); */
+}
+
+main .tasks .container .row .col .col-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-left: -1.2rem;
+    font-family: montserratMedium;
+    color: var(--primary-gray)
+}
+
+main .tasks .container .row .col .row {
+    /*barra de rolagem*/
+    overflow-y: auto;
+    height: 70vh;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    margin-left: -1.2rem;
+
+}
+
+/* width */
+main .tasks .container .row .col .row::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Handle */
+main .tasks .container .row .col .row::-webkit-scrollbar-thumb {
+    background: var(--primary-gray);
+    border-radius: 10px;
+}
+
+main .tasks .container .row .col .row::-webkit-scrollbar-track {
+    background: rgb(241, 241, 241);
+}
+
+
+/* Handle */
+main .tasks .container .row .col .row::-webkit-scrollbar-thumb {
+    background: rgb(204, 204, 204);
+}
+
+/* Handle on hover */
+main .tasks .container .row .col .row::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-gray);
+}
+
+main .tasks .container .row .col .row .card-task {
+    border-radius: 10px;
+    box-shadow: 0px 4px 9px 1px rgba(114, 116, 126, 0.25);
+    padding: 1rem;
+    /* height: 20vh; */
+    transition: .3s;
+    /* height: 3vh; */
+    min-height: 15vh;
+    max-height: 20vh;
+    cursor: pointer;
+}
+
+/*bordas*/
+.card-roxo {
+    border-top: solid 5px var(--primary-purple);
+
+}
+
+.card-verde {
+    border-top: solid 5px var(--primary-green);
+
+}
+
+.card-amarelo {
+    border-top: solid 5px var(--primary-yellow);
+
+}
+
+.card-lilas {
+    border-top: solid 5px var(--primary-light-purple); 
+
+}	
+
+
+/*titulos*/
+main .tasks .container .row .col .row .card-roxo .title{
+    color: var(--primary-purple);
+}
+
+main .tasks .container .row .col .row .card-verde .title{
+    color: var(--primary-green);
+}
+
+main .tasks .container .row .col .row .card-amarelo .title{
+    color: var(--primary-yellow);
+}
+
+main .tasks .container .row .col .row .card-lilas .title{
+    color: var(--primary-light-purple);
+}
+
+
+main .tasks .container .row .col .row .card-task .title {
+    font-family: montserratBold;
+    font-size: 1.2rem;
+    /*limitar tamanho do texto*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+
+}
+
+main .tasks .container .row .col .row .card-task .desc {
+    color: var(--primary-gray-texts);
+    font-family: montserrat;
+    font-size: .8rem;
+
+    /*limitar tamanho do texto*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;  
+    -webkit-box-orient: vertical;
+
+
+}
+
+
+
+.modal-tarefa .modal-dialog .modal-content .modal-header {
+    font-family: montserratBold;
+    color: var(--primary-dark-purple);
+}
+
+.modal-tarefa .modal-dialog .modal-content .modal-header .bi-check-circle-fill {
+    margin-right: 0.5rem;
+}
+
+.modal-tarefa .modal-dialog .modal-body .row {
+    margin-bottom: 2vh;
+}
+
+.modal-tarefa .modal-dialog .modal-body .row .col label {
+    color: var(--primary-gray);
+    font-family: montserratMedium;
+    letter-spacing: 2px;
+}
+
+.modal-tarefa .modal-dialog .modal-body .row .col input,
+.modal-tarefa .modal-dialog .modal-body .row .col select {
+    height: 45px;
+    margin-top: 10px;
+    color: var(--primary-gray-texts);
+    font-family: montserrat;
+}
+
+.modal-tarefa .modal-dialog .modal-body .row .col input:focus,
+.modal-tarefa .modal-dialog .modal-body .row .col select:focus {
+    border: #664ebf solid 1px;
+    box-shadow: 0 0 0 0.250rem #a191d981;
+}
+
+.modal-tarefa .modal-dialog .modal-body .row .col input::placeholder,
+.modal-tarefa .modal-dialog .modal-body .row .col select {
+    color: var(--primary-gray);
+    font-family: montserrat;
+}
+
+
+.modal-tarefa .modal-dialog .modal-content .modal-footer .btn-primary {
+    height: 40px;
+    background-color: var(--primary-purple);
+    border-radius: 5px;
+    color: var(--primary-white);
+    font-family: montserratBold;
+    border: var(--primary-purple) solid 3px;
+}
+
+.modal-tarefa .modal-dialog .modal-content .modal-footer .btn-secondary {
+    height: 40px;
+    background-color: var(--primary-gray);
+    border-radius: 5px;
+    color: var(--primary-white);
+    font-family: montserratBold;
+    border: #8B8B8B solid 3px;
+}
+
+.modal-tarefa .modal-dialog .modal-content .modal-footer .btn-primary:hover {
+    background-color: var(--primary-dark-purple);
+    border: var(--primary-dark-purple) solid 2px;
+    transition: .3s;
+}
+
+.modal-tarefa .modal-dialog .modal-content .modal-footer .btn-secondary:hover {
+    background-color: var(--secondary-gray);
+    border: var(--secondary-gray) solid 2px;
+    transition: .3s;
+}
+
+
+input[type="radio"]:checked+label {
+    border: #664ebf solid 1px !important;
+    box-shadow: 0 0 0 0.250rem #a191d981 !important;
+}
+
+label:focus-within::after {
+    color: red;
+}
+
+
+.modal .modal-dialog .modal-content .modal-header {
+    font-family: montserratBold;
+    color: var(--primary-dark-purple);
+}
+
+.modal .modal-dialog .modal-content .modal-header .bi-check-circle-fill {
+    margin-right: 0.5rem;
+}
+
+.modal .modal-dialog .modal-content .modal-body .info {
+    margin-bottom: 2vh;
+}
+
+.modal .modal-dialog .modal-content .modal-body .info .title_info {
+    color: var(--primary-gray);
+    font-family: montserratMedium;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.modal .modal-dialog .modal-content .modal-body .info .desc_info {
+    color: var(--primary-gray-texts);
+    font-family: montserrat;
+    font-size: 1rem;
+}

@@ -1,0 +1,143 @@
+:root{
+    --primary-black: #1E1E1E;
+    --primary-dark-purple : #5435C5;
+    --secondary-dark-purple : #4112A6;
+    --primary-purple : #664ebf;
+    --primary-light-purple : #A191D9;
+    --primary-green: #01CCA7;
+    --primary-yellow: #DAAA02;
+    --primary-white: #F8F8F7;
+    --sencodary-white: #FFFFFF;
+    --primary-gray-texts: #4A4A4A;
+    --primary-gray: #8B8B8B;
+
+}
+
+
+@font-face {
+    font-family: montserrat;
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: montserratBlack;
+    src: url('../fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: montserratBold;
+    src: url('../fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: montserratLight;
+    src: url('../fonts/Montserrat-Light.ttf');
+}
+
+@font-face {
+    font-family: montserratMedium;
+    src: url('../fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: montserratThin;
+    src: url('../fonts/Montserrat-Thin.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+body{
+    background-color: var(--primary-white);
+}
+
+.navbar{
+    height: 70px; 
+    background-color: var(--primary-white);
+    padding-right:200px;
+    padding-left: 200px;
+}
+
+
+.navbar .logo{
+    font-size: 1.5rem;
+    color: var(--secondary-dark-purple);
+}
+
+.navbar .logo .img-logo{
+    width: 128px;
+}
+
+.navbar .logo .logo-one{
+    font-family: montserratBlack;
+    color: var(--primary-dark-purple);
+}
+
+.navbar .logo .logo-two{
+    font-family: montserratLight;
+}
+
+.navbar .menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar .menu .option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    font-family: montserrat;
+    font-size: 1.2rem;
+    color: var(--primary-black);
+}
+
+.navbar .menu .option:hover{
+    color: var(--primary-dark-purple);
+    border-bottom: #4112A6 solid 1px;
+}
+
+.navbar .menu .btn-sign{
+    background-color: var(--primary-dark-purple);
+    color: var(--primary-white);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: montserratMedium;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.navbar .menu .btn-sign:hover{
+    box-shadow: 0px 4px 11px 0px rgba(65, 18, 166, 0.46);
+}
+
+
+footer{
+    background-color: var(--primary-purple);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p{
+    font-family: montserrat;
+    font-size: 1.2rem;
+    color: var(--primary-white);
+    margin-bottom: 0;
+}
+
+footer .logo-one{
+    font-family: montserratBlack;
+    color: var(--primary-white);
+}

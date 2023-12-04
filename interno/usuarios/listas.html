@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmos | Listas </title>
+    <link rel="icon" href="/front_cosmos/assets/img/logo_url.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/front_cosmos/assets/css/menu.css">
+    <link rel="stylesheet" href="/front_cosmos/assets/css/listas.css">
+    <script src="/front_cosmos/assets/js/classes/Lista.js"></script>
+    <script>
+        lista.buscar_lista(JSON.parse(sessionStorage.getItem('logado')).id_usuario);
+    </script>
+
+</head>
+
+<body id="body-pd">
+    <header class="header" id="header">
+        <div class="header_toggle"><i class="bi bi-list" id="header-toggle"></i></div>
+        <div class="profile">
+            <div class="header_img" id="user_icon"></div>
+            <div class="user-name" id="user_name"></div>
+        </div>
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div>
+                <a href="#" class="nav_logo">
+                    <img src="/front_cosmos/assets/img/logo_url.png" alt="" class="nav_logo-icon">
+                    <span class="nav_logo-name">Cosmos</span>
+                </a>
+                <div class="nav_list">
+                    <a href="home.html" class="nav_link ">
+                        <i class="bi bi-grid-fill nav_icon"></i>
+                        <span class="nav_name">Inicio</span>
+                    </a>
+                    <a href="listas.html" class="nav_link active">
+                        <i class="bi bi-check-circle-fill nav_icon"></i>
+                        <span class="nav_name">Listas</span>
+                    </a>
+                    <a href="calendario.html" class="nav_link">
+                        <i class="bi bi-calendar-date-fill nav_icon"></i>
+                        <span class="nav_name">Calendário</span>
+                    </a>
+                    <a href="config.html" class="nav_link">
+                        <i class="bi bi-gear-fill nav_icon"></i>
+                        <span class="nav_name">Configurações</span>
+                    </a>
+                </div>
+            </div>
+            <a href="#" class="nav_link">
+                <i class="bi bi-box-arrow-left nav_icon"></i>
+                <span class="nav_name">Sair</span>
+            </a>
+        </nav>
+    </div>
+    <main class="height-100">
+        <div class="header-list">
+            <div class="header-list-title">
+                <i class="bi bi-check-circle-fill nav_icon"></i>
+                <h4>Listas</h4>
+            </div>
+            <button type="button" class="btn btn-primary btn-nova-lista" data-bs-toggle="modal"
+                data-bs-target="#exampleModal" onclick="abrir_modal()">
+                + Nova lista
+            </button>
+        </div>
+        <div class="lista">
+            <div class="container text-center" >
+                <div class="row row-cols-auto" id="listas_exibir">
+                    <div class="col">
+                        <div class="card-list">
+                            <div class="card-info">
+                                <h5 class="title">
+                                    Lista 1
+                                </h5>
+                                <p class="desc">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                                </p>
+                                <div class="flag-type">
+                                    <p class="flag-text">
+                                        Trabalho
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <p class="no-content">
+                Não há listas cadastradas
+            </p> -->
+        </div>
+    </main>
+    <div class="modal fade modal-lista" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Nova lista</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <label for="inp_titulo" class="lbl_titulo">Titulo</label>
+                            <input type="text" class="form-control" id="inp_titulo" placeholder="Digite aqui">
+                            <div class="validacao">
+                                <span class="valid-text" id="erro_titulo">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="inp_descricao" class="lbl_descricao">Descrição</label>
+                            <input type="text" class="form-control" id="inp_descricao" placeholder="Digite aqui">
+                            <div class="validacao">
+                                <span class="valid-text" id="erro_descricao">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="inp_tipo" class="lbl_tipo">Tipo</label>
+                            <select class="form-select" aria-label="Default select example" id="inp_tipo"
+                                onchange="exibirCampo()">
+                                <option selected>Selecione abaixo</option>
+                                <option value="Trabalho">Trabalho</option>
+                                <option value="Faculdade">Faculdade</option>
+                                <option value="Casa">Casa</option>
+                                <option value="Estudos">Estudos</option>
+                                <option value="Saúde">Saúde</option>
+                                <option value="Saúde">Saúde</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                            <div class="validacao">
+                                <span class="valid-text" id="erro_tipo">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="div_outros">
+                        <div class="col">
+                            <label for="inp_outros" class="lbl_outro">Qual?</label>
+                            <input type="text" class="form-control" id="inp_outros" placeholder="Digite aqui">
+                            <div class="validacao">
+                                <span class="valid-text" id="erro_outro">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="exampleColorInput" class="form-label">Escolha uma cor tema:</label>
+                            <div class="opcoes-user">
+                                <div class="opcoes">
+                                    <input type="radio" class="btn-check" name="options" id="rd_cor1" autocomplete="off"
+                                        value="#5435C5">
+                                    <label class="btn btn-secondary" for="rd_cor1">
+                                        <div class="div_roxo">
+                                        </div>
+                                    </label>
+                                    <input type="radio" class="btn-check" name="options" id="rd_cor2" autocomplete="off"
+                                        value="#A191D9">
+                                    <label class="btn btn-secondary" for="rd_cor2">
+                                        <div class="div_lilas"></div>
+                                    </label>
+                                    <input type="radio" class="btn-check" name="options" id="rd_cor3" autocomplete="off"
+                                        value="#01CCA7">
+                                    <label class="btn btn-secondary" for="rd_cor3">
+                                        <div class="div_verdeagua"></div>
+                                    </label>
+                                    <input type="radio" class="btn-check" name="options" id="rd_cor4" autocomplete="off"
+                                        value="#DAAA02">
+                                    <label class="btn btn-secondary" for="rd_cor4">
+                                        <div class="div_amarelo"></div>
+                                    </label>
+                                </div>
+                                <div class="validacao">
+                                    <span class="valid-text" id="erro_tipo_user">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" onclick="lista.cadastrar()">Criar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+<script src="/front_cosmos/assets/js/scripts/menu.js"></script>
+
+<script>
+    function abrir_modal() {
+        const myModal = document.getElementById('myModal')
+        const myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('show.bs.modal', () => {
+            myInput.focus()
+        })
+
+    }
+
+    function exibirCampo() {
+        // exibir campo outros
+        const inp_tipo = document.getElementById('inp_tipo')
+        const div_outros = document.getElementById('div_outros')
+        if (inp_tipo.value == 'Outros') {
+            div_outros.style.display = 'block'
+        } else {
+            div_outros.style.display = 'none'
+        }
+    }
+
+
+</script>

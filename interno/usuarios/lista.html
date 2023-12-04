@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmos | Listas </title>
+    <link rel="icon" href="/front_cosmos/assets/img/logo_url.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/front_cosmos/assets/css/menu.css">
+    <link rel="stylesheet" href="/front_cosmos/assets/css/lista.css">
+    <script>
+    </script>
+
+</head>
+
+<body id="body-pd">
+    <header class="header" id="header">
+        <div class="header_toggle"><i class="bi bi-list" id="header-toggle"></i></div>
+        <div class="profile">
+            <div class="header_img" id="user_icon"></div>
+            <div class="user-name" id="user_name"></div>
+        </div>
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div>
+                <a href="#" class="nav_logo">
+                    <img src="/front_cosmos/assets/img/logo_url.png" alt="" class="nav_logo-icon">
+                    <span class="nav_logo-name">Cosmos</span>
+                </a>
+                <div class="nav_list">
+                    <a href="home.html" class="nav_link ">
+                        <i class="bi bi-grid-fill nav_icon"></i>
+                        <span class="nav_name">Inicio</span>
+                    </a>
+                    <a href="listas.html" class="nav_link active">
+                        <i class="bi bi-check-circle-fill nav_icon"></i>
+                        <span class="nav_name">Listas</span>
+                    </a>
+                    <a href="calendario.html" class="nav_link">
+                        <i class="bi bi-calendar-date-fill nav_icon"></i>
+                        <span class="nav_name">Calendário</span>
+                    </a>
+                    <a href="config.html" class="nav_link">
+                        <i class="bi bi-gear-fill nav_icon"></i>
+                        <span class="nav_name">Configurações</span>
+                    </a>
+                </div>
+            </div>
+            <a href="#" class="nav_link">
+                <i class="bi bi-box-arrow-left nav_icon"></i>
+                <span class="nav_name">Sair</span>
+            </a>
+        </nav>
+    </div>
+    <main class="height-100">
+        <div class="header-list">
+            <div class="header-list-title">
+                <div class="title" id="lista_infos">
+                    <i class="bi bi-file-earmark-check-fill"></i>
+                    <div class="desc">
+                        <h4 id="list_name">Lista</h4>
+                        <p id="list_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <button type="button" class="btn btn-primary btn-nova-lista" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                + Nova tarefa
+            </button>
+        </div>
+        <div class="tasks">
+            <div class="container">
+                <div class="row row-cols-4">
+                    <div class="col col-md-auto" id="iniciar">
+                        <h4 class="col-title">
+                            Iniciar
+                        </h4>
+                        <div class="row" id="etapa1">
+
+                        </div>
+
+                    </div>
+                    <div class="col col-md-auto" id="andamento">
+                        <h4 class="col-title">
+                            Em andamento
+                        </h4>
+                        <div class="row" id="etapa2">
+                        </div>
+                    </div>
+                    <div class="col col-md-auto" id="concluido">
+                        <h4 class="col-title">
+                            Concluído
+                        </h4>
+                        <div class="row" id="etapa3">
+
+                        </div>
+                    </div>
+                    <div class="col col-md-auto" id="cancelado">
+                        <h4 class="col-title">
+                            Cancelado
+                        </h4>
+                        <div class="row" id="etapa4">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="modal fade modal-tarefa" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Nova tarefa</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <label for="inp_titulo" class="lbl_titulo">Titulo</label>
+                            <input type="text" class="form-control" id="inp_titulo" placeholder="Digite aqui">
+                            <div class="validacao">
+                                <span class="valid-text" id="erro_titulo">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="inp_descricao" class="lbl_descricao">Descrição</label>
+                            <input type="text" class="form-control" id="inp_descricao" placeholder="Digite aqui">
+                            <div class="validacao">
+                                <span class="valid-text" id="erro_descricao">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="inp_dt_inicio" class="lbl_dt_inicio">Data de inicio</label>
+                            <input type="date" class="form-control" id="inp_dt_inicio">
+                            <div class="validacao">
+                                <span class="valid-text" id="erro_dt_inicio">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="inp_dt_fim" class="lbl_dt_fim">Data de fim</label>
+                            <input type="date" class="form-control" id="inp_dt_fim">
+                            <div class="validacao">
+                                <span class="valid-text" id="erro_dt_fim">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" onclick="lista.cadastrar_tarefa()">Criar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button trigger modal
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_teste">
+        Launch demo modal
+    </button> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal_teste" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="titulo_teste">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="info">
+                        <p class="title_info">
+                            Titulo
+                        </p>
+                        <p class="desc_info" id="txt_titulo">
+                            Criar etc
+                        </p>
+                    </div>
+                    <div class="info">
+                        <p class="title_info">
+                            Descrição
+                        </p>
+                        <p class="desc_info" id="txt_desc">
+                            desc aqui
+                        </p>
+                    </div>
+                    <div class="info">
+                        <p class="title_info">
+                            Data de inicio
+                        </p>
+                        <p class="desc_info" id="txt_inicio">
+                            10/10/2021
+                        </p>
+                    </div>
+                    <div class="info">
+                        <p class="title_info">
+                            Data de conclusão	
+                        </p>
+                        <p class="desc_info" id="txt_fim">
+                            21/10/2021
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src=""></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+<script src="/front_cosmos/assets/js/scripts/menu.js"></script>
+<script src="/front_cosmos/assets/js/classes/Lista.js"></script>
+<script>
+
+    // variáveis
+    var data = sessionStorage.getItem("logado");
+    jsonData = JSON.parse(data);
+    const id_usuario = jsonData.id_usuario
+
+    const nome_lista = sessionStorage.getItem('nome_lista')
+    const id_lista = sessionStorage.getItem('id_lista')
+    const exibir = document.getElementById('list_name')
+    const desc = sessionStorage.getItem('desc_lista')
+    const exibir_desc = document.getElementById('list_desc')
+
+    exibir.innerHTML = nome_lista
+    exibir_desc.innerHTML = desc
+
+    lista.buscar_tarefas(id_usuario, id_lista)
+
+    function abrir_infos_tarefa(id_tarefa, titulo, descricao, data_inicio, data_conclusao, flag_conclusao, lista, etapa) {
+        let modal = document.getElementById('modal_teste')
+        let title = document.getElementById('titulo_teste')
+        let txt_titulo = document.getElementById('txt_titulo')
+        let txt_desc = document.getElementById('txt_desc')
+        let txt_inicio = document.getElementById('txt_inicio')
+        let txt_fim = document.getElementById('txt_fim')
+        
+        // formatar data
+        data_inicio = data_inicio.split('T')
+        data_inicio = data_inicio[0].split('-')
+        data_inicio = data_inicio[2] + '/' + data_inicio[1] + '/' + data_inicio[0]
+        data_conclusao = data_conclusao.split('T')
+        data_conclusao = data_conclusao[0].split('-')
+        data_conclusao = data_conclusao[2] + '/' + data_conclusao[1] + '/' + data_conclusao[0]
+
+
+
+
+        title.innerHTML = 'Informações da tarefa'
+        txt_titulo.innerHTML = titulo
+        txt_desc.innerHTML = descricao
+        txt_inicio.innerHTML = data_inicio
+        txt_fim.innerHTML = data_conclusao
+
+
+        document.getElementById('meuInput').addEventListener('click', function() {
+            this.readOnly = false;
+        });
+
+    }
+
+</script>

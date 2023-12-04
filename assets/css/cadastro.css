@@ -1,0 +1,222 @@
+:root{
+    --primary-black: #1E1E1E;
+    --primary-dark-purple : #5435C5;
+    --secondary-dark-purple : #4112A6;
+    --primary-purple : #664ebf;
+    --primary-light-purple : #A191D9;
+    --primary-green: #01CCA7;
+    --primary-yellow: #DAAA02;
+    --primary-white: #F8F8F7;
+    --sencodary-white: #FFFFFF;
+    --primary-gray-texts: #4A4A4A;
+    --primary-gray: #8B8B8B;
+
+}
+
+
+@font-face {
+    font-family: montserrat;
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: montserratBlack;
+    src: url('../fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: montserratBold;
+    src: url('../fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: montserratLight;
+    src: url('../fonts/Montserrat-Light.ttf');
+}
+
+@font-face {
+    font-family: montserratMedium;
+    src: url('../fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: montserratThin;
+    src: url('../fonts/Montserrat-Thin.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+body{
+    background-color: var(--primary-white);
+}
+
+.navbar{
+    height: 50px; 
+    background-color: var(--primary-white);
+    padding-left: 20px;
+    color: var(--primary-purple);
+}
+
+.navbar a{
+    color: var(--primary-purple);
+    font-family: montserratBold;
+    font-size: 1.2rem;
+    margin-right: 20px;
+}
+
+main{
+    /* height: 100vh;s */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+
+main h2{
+    font-family: montserratBlack;
+    color: var(--primary-dark-purple);
+    margin-bottom: 20px;
+    letter-spacing: 5.6px;
+}
+
+main .subtitulo{
+    font-family: montserrat;
+    color: var(--primary-gray);
+    margin-bottom: 3vh;
+    text-align: center;
+}
+
+
+main .termos{
+    color: var(--primary-gray-texts);
+}
+
+main .termos a{
+    color: var(--primary-purple);
+}
+
+main .termos a:hover{
+    color: var(--primary-dark-purple);
+    text-decoration: underline;
+}
+
+/*MUDAR cor da label do inpt radio quando selecionada*/
+input[type="radio"]:checked + label{
+    border: #5435C5 solid 2px !important;
+}
+
+
+main .form-cadastro .opcoes-user .opcoes .btn-secondary .bi{
+    font-size: 3rem;
+    color: var(--primary-purple);
+}
+
+main .form-cadastro .opcoes-user .opcoes .btn-secondary .texts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center;
+    margin-left: 1vw;
+}
+
+main .form-cadastro .opcoes-user .opcoes .btn-secondary .texts .title{
+    font-family: montserratBold;
+    font-size: 1rem;
+    color: var(--primary-dark-purple);
+    margin-bottom: 5px;
+}
+
+main .form-cadastro .opcoes-user .opcoes .btn-secondary .texts .subtitle{
+    font-family: montserrat;
+    font-size: 0.8rem;
+    color: var(--primary-gray-texts);
+}
+
+main hr{
+    width: 100%;
+    border: 1px solid var(--primary-gray);
+    margin: 3vh 0;
+}
+
+main .form-cadastro .row{
+    margin-bottom: 2vh;
+}
+
+main .form-cadastro .row .col .lbl_txt{
+    color: var(--primary-gray);
+    font-family: montserratMedium;
+    letter-spacing: 2px;
+}
+
+main .form-cadastro .row .col input{
+    height: 45px;
+    background-color: #F8F8F7;
+    margin-top: 10px;
+    color: var(--primary-gray-texts);
+    font-family: montserrat;
+}
+
+main .form-cadastro .row .col input:focus{
+    border: #664ebf solid 1px;
+    box-shadow: 0 0 0 0.250rem #a191d981; 
+}
+
+main .form-cadastro .row .col input::placeholder{
+    color: var(--primary-gray);
+    font-family: montserrat;
+}
+
+
+main .form-cadastro .row .col .btn-cadastrar{
+    margin-top: 2vh;
+    height: 40px;
+    background-color: var(--primary-dark-purple);
+    border-radius: 5px;
+    color: var(--primary-white);
+    font-family: montserratBold;
+    border: #5435C5 solid 3px;
+    width: 100%;
+}
+
+main .form-cadastro .row .col .btn-cadastrar:hover{
+    background-color: var(--primary-purple);
+    border: #664ebf solid 2px;
+    transition: .3s;
+    box-shadow: 0px 4px 11px 0px rgba(65, 18, 166, 0.46);
+}
+
+footer{
+    background-color: var(--primary-purple);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p{
+    font-family: montserrat;
+    font-size: 1.2rem;
+    color: var(--primary-white);
+    margin-bottom: 0;
+}
+
+footer .logo{
+    width: 20px;
+}
+
+footer .logo-one{
+    font-family: montserratBlack;
+    color: var(--primary-white);
+}

@@ -1,0 +1,209 @@
+:root{
+    --primary-black: #1E1E1E;
+    --primary-dark-purple : #5435C5;
+    --primary-purple : #664ebf;
+    --primary-light-purple : #A191D9;
+    --primary-green: #01CCA7;
+    --primary-yellow: #DAAA02;
+    --primary-white: #F8F8F7;
+    --sencodary-white: #FFFFFF;
+    --primary-gray-texts: #4A4A4A;
+    --primary-gray: #8B8B8B;
+
+}
+
+
+@font-face {
+    font-family: montserrat;
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: montserratBlack;
+    src: url('../fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: montserratBold;
+    src: url('../fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: montserratLight;
+    src: url('../fonts/Montserrat-Light.ttf');
+}
+
+@font-face {
+    font-family: montserratMedium;
+    src: url('../fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: montserratThin;
+    src: url('../fonts/Montserrat-Thin.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+body{
+    background-color: var(--primary-white);
+}
+
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .container{
+    width: 40vw;
+    padding: 5vh 2vw;
+    background-color: var(--primary-white);
+    box-shadow: 1px 4px 10px 0px rgba(69, 69, 69, 0.26);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .container .title{
+    font-family: montserratBold;
+    color: var(--primary-dark-purple);
+}
+
+main .container .subtitle{
+    font-family: montserrat;
+    color: var(--primary-gray);
+}
+
+main .container .form-login{
+    width: 100%;
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .container .form-login .mb-3{
+    width: 90%;
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main .container .form-login .mb-3 label{
+    color: var(--primary-gray);
+    font-family: montserratMedium;
+    letter-spacing: 2px;
+} 
+
+main .container .form-login .mb-3 #inp_email_login,
+main .container .form-login .mb-3 #inp_senha_login{
+    height: 45px;
+    background-color: #F8F8F7;
+}
+
+
+#inp_email_login:focus,
+#inp_senha_login:focus{
+    border: #664ebf solid 1px;
+    box-shadow: 0 0 0 0.250rem #a191d981; 
+}
+
+
+/*placeholder */
+main .container .form-login .mb-3 #inp_email_login::placeholder,
+main .container .form-login .mb-3 #inp_senha_login::placeholder{
+    color: var(--primary-gray);
+    font-family: montserrat;
+}
+
+/*texto escrito no input*/
+main .container .form-login .mb-3 #inp_email_login,
+main .container .form-login .mb-3 #inp_senha_login{
+    color: var(--primary-gray-texts);
+    font-family: montserrat;
+}
+
+
+main .container .form-login .form-check{
+    display: flex;
+    width: 90%;
+    color: var(--primary-gray);
+    font-family: montserratMedium;
+}
+
+main .container .form-login .form-check label{
+    margin-left: 5px;
+    font-family: montserrat;
+}
+
+/*cor do check antes*/
+.form-check-input[type=checkbox] {
+   background-color: var(--primary-white);
+   /* border-color: #a5a5a5; */
+} 
+
+/*cor do check clicado*/
+.form-check-input[type=checkbox]:checked {
+   background-color: var(--primary-dark-purple);
+   border: #664ebf solid 1px;
+}
+
+.form-check-input[type=checkbox]:focus {
+    box-shadow: 0 0 0 0.250rem #a191d981; 
+    border: #664ebf solid 1px;
+}
+
+/*botão*/
+main .container .form-login .mb-3 .btn-entrar{
+    margin-top: 2vh;
+    height: 40px;
+    background-color: var(--primary-dark-purple);
+    border-radius: 5px;
+    color: var(--primary-white);
+    font-family: montserratBold;
+    border: #5435C5 solid 3px;
+}
+
+main .container .form-login .mb-3 .btn-entrar:hover{
+    background-color: var(--primary-purple);
+    border: #664ebf solid 2px;
+    transition: .3s;
+    box-shadow: 0px 4px 11px 0px rgba(65, 18, 166, 0.46);
+}
+
+main .container .form-login .infos p{
+    font-family: montserrat;
+    color: var(--primary-gray);
+    font-size: 1rem;
+}
+
+main .container .form-login .infos p a{
+    color: var(--primary-dark-purple);
+}
+
+main .container .form-login .infos p a:hover{
+    color: var(--primary-purple);
+    text-decoration: underline;
+
+}
+
+footer .logo{
+    width: 20px;
+}
